@@ -34,22 +34,105 @@
 </p> ✷ INFINITY PROJECT • DESIGNER • 2015 — 2016</p>
   </div>
 
-  <div class="div-2">YANDEX</div>
+    <div class="div-2">YANDEX MARKET</div>
   <div class="at-the-moment-the-head-of-the">
     SNIPPETS
   </div>
   <div class="✷-avito-head-of-design-direc">
     CREATE A NEW ACRCHITECTURE FOR SNIPPETS IN ORDER TO SCALE FUNCTIONALITY
     </div>
-    <p><img src="http://drive.google.com/uc?export=view&id=1uhPnfo6VobBbBSemUm_KbgvRRY2g8dco"style="max-width:100%;height:auto;"></p>
   
-    
+
+
+ 
+<!-- source: https://css-tricks.com/adaptive-photo-layout-with-flexbox/ -->
+<ul class="photogallery">
+  <li class="photogallery__item">
+    <img class="photogallery__image" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/a7040c164231157.63f39858e2426.png" alt="A Toyota Previa covered in graffiti" loading="lazy">
+  </li>
+  <li class="photogallery__item">
+    <img class="photogallery__image" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/5a5fff164231157.63f39858de469.png" alt="Interesting living room light through a window" loading="lazy">
+  </li>
+  <li class="photogallery__item">
+    <img class="photogallery__image" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/3248ce164231157.63f39858e0bc9.png" alt="Sara on a red bike" loading="lazy">
+  </li>
+  <li class="photogallery__item">
+    <img class="photogallery__image" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/7414f5164231157.63f3930db98a0.png" alt="XOXO venue in between talks" loading="lazy">
+  </li>
+  <li class="photogallery__item">
+    <img class="photogallery__image" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e5185d164231157.63f3930db7ca2.png" alt="Trees lit by green light during dusk" loading="lazy">
+  </li>
+  <li class="photogallery__item">
+    <img class="photogallery__image" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/f85f26164231157.63f3930db6ea2.png" alt="Portrait of Justin Pervorse" loading="lazy">
+  </li>
+  <li class="photogallery__item">
+    <img class="photogallery__image" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/8d043a164231157.63f3a08d53b77.png" alt="Empty bike racks outside a hotel" loading="lazy">
+  </li>
+  
+
+
+
 
 
 
   
 </div>
 <style>
+.photogallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  
+}
+
+.photogallery__item {
+  flex-grow: 1;
+  height: 40vh;
+
+}
+
+.photogallery__image {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+  .photogallery__item {
+    height: 30vh;
+  }
+}
+
+
+@media (max-height: 480px) {
+  .photogallery__item {
+    height: 80vh;
+  }
+}
+
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .photogallery {
+    flex-direction: row;
+  }
+
+  .photogallery__item {
+    height: auto;
+    width: 100%;
+  }
+
+  .photogallery__image {
+    max-height: 75vh;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
   
   .div {
     display: flex;
@@ -70,6 +153,7 @@
     padding-left: 18px;
     background-color: rgba(227, 227, 227, 1);
   }
+
   .leadership-✷-senior-✷-design-✷ {
     color: rgba(0, 0, 0, 1);
     font-size: 11px;
